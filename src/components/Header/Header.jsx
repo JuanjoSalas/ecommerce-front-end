@@ -5,13 +5,10 @@ import "./Header.scss";
 
 export const Header = () => {
   return (
-    <div className="Header">
+    <div className="header">
         <img className="logo" src={ logo }/>
         <nav>
             <span><Link to="/">Home</Link></span>
-            <span><Link to="/login">Login</Link></span>
-            <span><Link to="/register">Register</Link></span>
-            <span><Link to="/profile">profile</Link></span>
         </nav>
     </div>
   )
