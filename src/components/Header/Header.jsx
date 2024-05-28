@@ -6,7 +6,7 @@ import "./Header.scss";
 export const Header = () => {
   return (
     <div className="header">
-        <img className="logo" src={ logo }/>
+        <img className="logo-header" src={ logo }/>
         <nav>
             <span><Link to="/">Home</Link></span>
             <span><Link to="/user/login">Login</Link></span>
