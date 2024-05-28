@@ -5,7 +5,6 @@ export const Home = () => {
   return (
     <div className='home'>
     <span>Home</span>
-    <span><Products/></span>
     </div>
   )
 }
