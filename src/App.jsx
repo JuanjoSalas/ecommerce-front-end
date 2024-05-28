@@ -6,20 +6,23 @@ import Products from './components/Products/Products.jsx';
 import { ProductProvider } from "./context/ProductContext/ProductState.jsx";
 import Login from "./components/Login/Login.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import { UserProvider } from './context/UserContext/UserState.jsx';
 
 function App() {
 
   return (
+    <UserProvider>
     <ProductProvider>
     <BrowserRouter>
     <Header/>
     <Routes>
     <Route path="/" element={<><Home/><Products/></>}/>
-    <Route path="/users/login" element={<Login/>}/>
+    <Route path="/user/login" element={<Login/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>
     </ProductProvider>
+    </UserProvider>
   )
 }
 
