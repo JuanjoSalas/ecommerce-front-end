@@ -7,6 +7,7 @@ import { ProductProvider } from "./context/ProductContext/ProductState.jsx";
 import Login from "./components/Login/Login.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import { UserProvider } from './context/UserContext/UserState.jsx';
+import Cart from './components/Cart/Cart.jsx';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <Header/>
     <Routes>
     <Route path="/" element={<><Home/><Products/></>}/>
+    <Route path="/cart" element={<Cart />} />
     <Route path="/user/login" element={<Login/>}/>
     </Routes>
     <Footer/>

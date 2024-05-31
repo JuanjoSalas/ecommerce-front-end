@@ -1,16 +1,21 @@
 import React from "react";
 import logo from "../../assets/img/logo.png"
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link,useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import "./Header.scss";
+import { Badge } from 'antd';
+import { ProductContext } from "../../context/ProductContext/ProductState";
+import {ShoppingCartOutlined} from "@ant-design/icons"
 
 export const Header = () => {
   const { token, logout } = useContext(UserContext);
+  const {cart} = useContext(ProductContext)
+  const navigate = useNavigate();
 
-  const logoutUser = () => {
-    logout();
-  };
+  useEffect(() => {
+   localStorage.setItem("cart",JSON.stringify(cart))
+  },[cart])
 
   return (
     <div className="header">
@@ -19,6 +24,7 @@ export const Header = () => {
             {token ? (
             <>
               <span><Link to="/user/userInfo">Profile</Link></span>
+             <Link to="/cart"> Cart <Badge count={cart.length} size="small"><ShoppingCartOutlined /></Badge></Link>
               <button class="Btn"
             onClick={() => {
               logout();
