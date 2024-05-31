@@ -10,6 +10,7 @@ import { UserProvider } from './context/UserContext/UserState.jsx';
 import Cart from './components/Cart/Cart.jsx';
 import Profile from './components/Profile/Profile.jsx';
 
+
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
     <Route path="/cart" element={<Cart />} />
     <Route path="/user/login" element={<Login/>}/>
     <Route path="/profile" element={<Profile />} />
+   
     </Routes>
     <Footer/>
     </BrowserRouter>

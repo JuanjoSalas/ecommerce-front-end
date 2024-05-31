@@ -1,10 +1,11 @@
 import React from 'react'
-import Products from '../Products/Products';
+import banner from "../../assets/img/banner.png"
+import "./Home.scss";
 
 export const Home = () => {
   return (
     <div className='home'>
-    <span>Home</span>
+      <img className="banner" src={ banner }/>
     </div>
   )
 }

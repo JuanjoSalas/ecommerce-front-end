@@ -33,6 +33,14 @@ export const UserProvider = ({ children }) => {
     }
   };
 
+  //const register = async (user) => {
+  //try {
+    //const res = await axios.post(API_URL, user);
+ // } catch (error) {
+   // console.error(error);
+ // }
+//};
+
   const getLoggedUserInfo = async () => {
     const token = localStorage.getItem("token");
     try {

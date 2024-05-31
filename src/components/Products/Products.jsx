@@ -23,8 +23,8 @@ const Products = () => {
           <div class="card-info">
             <p class="text-title">{product.name}</p>
             <div class="text-body">
-            <span>{product.players}</span>
-            <span>+{product.age}</span>
+            <span className="details">{product.players}<img className='icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAfhJREFUSEvFl8lNA0EQRb8D4EYAwJULR25AAqQAJMISCRACJMBy40YGEAA3EsAPTVnlmuplRrLckj2W3V2//q+lywttaS22hKs5wHuSTiXx/B5e+P86hUQvMCCXkm4qxnHicenQg3OmuL0F3AMYjeMA7K9qCtSAAX0ZJDUbGHwbDPOZPSykvxiethcHzkrsS8AY/HIeYwQGrThyjnAQFlbxXAkYprBg3S3fboNs55KOJD1L+kwkZb/lA+D7cU8GfO88LoE+DYZ+JR1I+mmAk3BrMY/AsIStyTTyVNL1oIJhcYa4x+VzZCR5BPZsSYwspkj8LmlH0oek4wZb+xkSOPC/IjAJhacjaYLxXUmHCVPY47xlO8estFagEdjLnMU2Ibb6CiAALSGrGR2BKQEOs0gEWLdW1mCsg8VKWLPlpfbAa/GooPuyY1u3Uh7Y194c4Nm92se4lNFZycTLY7LUm0gupE9zxUvt+zMlAOupy9j7ckovi1jHliy9l0LmWCnT1y6ZCOxZp819ggTxWq12Luz6ttnqYDU/fJWMyiy7nWJzZ5ypNoME3YOm+bKJQcC3zsmDACRijGyi5Gnjj5GlFE/cPW69evLoYwbnDHucbeZGa8r0DvhZKkuq2S2zp1JQwF4WDpLHD/Y9dmb9k+gy3NrUK3XLzuTf/wCOOoQfMD8qVQAAAABJRU5ErkJggg=="/></span>
+            <span>+{product.age}<img className='icon' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAVJJREFUSEvtloENwjAMBN1JgE1gEmASYBJgEmAS2AR6KK7cqMFpWqlIEKlSwU7e/vjtVjLRqibClVLguYhsQtCn+v3RN4FS4KWIXALYSkSuf2CPgS6qoXEtItxjamFTu0fzLVxFyy8GpmCOXrSF9kO9b697LTAZ3M2hXia5+JadhSrAAhPNbkilJiKxCtjWV4T8Wjq2wKUyS7HwDIaG7lTGvwfcFIFTQRROTrvMppqKPmshRODUgtU5wOobB0FhIU/VvHvHioWjDgE2cwiHdS2CpWoVnF4e+7rAbLadK/6tjPC/zYiAsFlAu9cF5o5T2bU6UEgdXx2Tlg2CYHpl37HKich5ZvUB9FyiT3U06ws4/u9mUQKc2xY9v94Zewfm2r8T2I5ECmjMpcOns6qRD9r79AEwNJhmBnR9CBDd2OAogWwbRYw9hbIZ+QNnUzXUcTKqX1ztXB9BWlKSAAAAAElFTkSuQmCC"/></span>
             </div>
           </div>
           <div class="card-footer">
