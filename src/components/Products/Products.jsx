@@ -10,7 +10,7 @@ const Products = () => {
   }, []);
 
   if(!products.games){
-    return <Spin />;
+    return <span class="loader"></span>
   }
 
   const product = products.games.map((product) => {
