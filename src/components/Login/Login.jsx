@@ -8,7 +8,7 @@ import "./Login.scss";
 
 export const Login = () => {
   const {login} = useContext(UserContext)
-  const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+  //const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
 
 const navigate = useNavigate()
   const onFinish = (values) => {
@@ -46,10 +46,10 @@ const navigate = useNavigate()
           required: true,
           message: 'Please input your email!',
         },
-        {
-          pattern: emailRegex,
-          message: 'Please input a correct email!',
-        },
+        //{
+          //pattern: emailRegex,
+          //message: 'Please input a correct email!',
+        //},
       ]}
     >
       <Input />
