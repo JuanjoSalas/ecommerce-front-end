@@ -22,8 +22,8 @@ export const Header = () => {
             <span><Link to="/"><img className="nav-img" src={ logo }/></Link></span>
             {token ? (
             <>
-              <span className="nav" ><Link to="/user/userInfo">Profile</Link></span>
-             <span className="nav" ><Link to="/cart"> Cart <Badge count={cart.length} size="small"><ShoppingCartOutlined /></Badge></Link></span>
+              <span className="nav" ><Link to="/user/userInfo">Perfil</Link></span>
+             <span className="nav" ><Link to="/cart"> Cesta <Badge count={cart.length} size="small"><ShoppingCartOutlined /></Badge></Link></span>
               <button class="comic-button"
             onClick={() => {
               logout();
