@@ -19,11 +19,10 @@ export const Header = () => {
 
   return (
     <div className="header">
-        <img className="logo-header" src={ logo }/>
-            <span><Link to="/">Home</Link></span>
+            <span><Link to="/"><img className="nav-img" src={ logo }/></Link></span>
             {token ? (
             <>
-              <span><Link to="/user/userInfo">Profile</Link></span>
+              <span className="nav" ><Link to="/user/userInfo">Profile</Link></span>
              <Link to="/cart"> Cart <Badge count={cart.length} size="small"><ShoppingCartOutlined /></Badge></Link>
               <button class="Btn"
             onClick={() => {
@@ -36,7 +35,7 @@ export const Header = () => {
           </button>
         </>
       ) : (
-            <span><Link to="/user/login">Login</Link></span>
+            <span><Link to="/user/login"><img className="login-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAU9JREFUSEvllt1RwzAQhHc7IZVAOiGVAJUQKkmoJKGSI8vIjGPrZ8UokwduxuMHa+67W520Ju4UvBMXfwJHxAOA58tz1kPy2NtAFzgB3wE8LUAqYEtSbytscEQIdqhkFXTndt8DFnTZ6bIOyb5xWrbAEaH9lMROSPLmnrvgVwAvDhXAG0mtr8YtwHuSu1Hg1mDNORqw/Siwzu2plSx93zjHypJaCc0BswZL+WxwgteGzBqqSbUucIJLdu35Y0ryBUADZd9a3R2be2wt6+7YymosssDJHCSvZJ4kXl2XF6P4dN2qCq64UasnnWMNW3Hfi2DDjVpwQT9K12cWPAA6FVW0yhLYscBWx7/wnFWuwBHR40QufHV/58DyXfnvyDiS3M4T5sAyAx2bkbH6M8mBYyRxluvKQK7AA6c5V3sVLIlHy/xTxPI/zLoybyH9/wN/A6l7ex9R2t5sAAAAAElFTkSuQmCC"/></Link></span>
          
           )}  
     </div>

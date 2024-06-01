@@ -5,19 +5,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    .logo-header {
-        max-width: 10%;
-        margin: 0 2.5vw;
-    }
-    nav{
-        margin-top: 25px;
-        color: white;
-
-        span{
-            margin: 2.5vw;
-        }
-    }
 }
+
+.nav-img{
+  height: 75px;
+}
+
+.login-img{
+  margin-top: 25px;
+  height: 25px;
+}
+
+.nav {
+  margin-top: 25px;
+}
+
 .Btn {
     display: flex;
     align-items: center;
