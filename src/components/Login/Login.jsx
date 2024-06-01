@@ -20,7 +20,7 @@ const navigate = useNavigate()
   };
 
   return (
-    <div>
+    <div className="form-login">
       <Form
     name="basic"
     labelCol={{
