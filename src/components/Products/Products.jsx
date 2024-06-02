@@ -1,6 +1,5 @@
 import React, { useContext, useEffect} from 'react';
 import { ProductContext } from "../../context/ProductContext/ProductState";
-import { Spin } from "antd";
 import "./Products.scss";
 
 const Products = () => {

@@ -1,39 +1,96 @@
-import React, { useState } from "react"
-import { useContext } from "react";
-import { UserContext } from "../../context/UserContext/UserState";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from 'react'
+import { Input, Button, Form } from 'antd';
+import { UserContext } from '../../context/UserContext/UserState';
+import { useNavigate } from 'react-router-dom';
+import "./Register.scss"
 
-import "./Register.scss";
+const Register = () => {
 
-const Register = ()=>{
-    const {register} = useContext(UserContext)
-    const [formData, setFormData] = useState({
-        name:'',
-        email:'',
-        password:''
-    })
-    const {name,email,password} = formData
-    const onChange = (e)=>{
-        setFormData({
-            ...formData,
-            [e.target.name]:e.target.value,
-        })
-    }
-    const onSubmit = (e) => {
-        e.preventDefault()
-        console.log('formData',formData)
-    }
-    
+  const {register} = useContext(UserContext)
+
+  const navigate = useNavigate()
+
+  const onFinishRegister = (values) => {
+    register(values)
+    navigate("/user/login")
+  };
+
   return (
-    <div className="Register-container">
-    <form class="form-register" onSubmit={onSubmit}>
-        <input class="infos" id="nome" type="text" name="name" placeholder="Nombre y Apellidos" required value={name} onChange={onChange} />
-        <div class="mario"></div>
-        <input id="email" type="email" name="email" placeholder="Correo electrónico" required value={email} onChange={onChange}/>
-        <input class="password" type="password" name="password" placeholder="Contraseña" required value={password} onChange={onChange}/>
-        <button class="btn-register" type="submit">Register</button>
-    </form>
+    <>
+      <div className="container-fluid d-flex align-items-center" id='register-card'>
+      <div className="row justify-content-center w-100">
+        <div className="col-md-6">
+          <div className="card shadow">
+            <div className="card-header bg-dark text-light text-center">
+              <h3>Register</h3>
+            </div>
+            <div className="card-body">
+              <Form
+                name="basic"
+                initialValues={{ remember: true }}
+                onFinish={onFinishRegister}
+                autoComplete="on"
+                layout="vertical"
+                className="ant-form-custom"
+              >
+                <Form.Item
+                  label="Name"
+                  name="name"
+                  rules={[
+                    { required: true, message: 'Please input your name' },
+                  ]}
+                >
+                  <Input />
+                </Form.Item>
+                <Form.Item
+                  label="Email"
+                  name="email"
+                  rules={[
+                    { required: true, message: 'Please input your email!' },
+                  ]}
+                >
+                  <Input />
+                </Form.Item>
+
+                <Form.Item
+                  label="Password"
+                  name="password"
+                  rules={[{ required: true, message: 'Please input your password!' }]}
+                >
+                  <Input.Password />
+                </Form.Item>
+                <Form.Item
+                  label="Adress"
+                  name="adress"
+                  rules={[
+                    { required: true, message: 'Please input your email!' },
+                  ]}
+                >
+                  <Input />
+                </Form.Item>
+                <Form.Item
+                  label="Role"
+                  name="role"
+                  rules={[
+                    { required: true, message: 'Please input your email!' },
+                  ]}
+                >
+                  <Input />
+                </Form.Item>
+
+                <Form.Item>
+                  <Button type="primary" className='bg-dark' htmlType="submit" block>
+                    Submit
+                  </Button>
+                </Form.Item>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    </>
   )
 }
+
 export default Register

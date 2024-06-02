@@ -2,6 +2,7 @@ import axios from "axios";
 import { createContext } from "react";
 import UserReducer from "./UserReducer";
 import { useReducer } from "react";
+import { notification } from "antd";
 
 const token = localStorage.getItem("token") || "";
 
@@ -84,7 +85,8 @@ export const UserProvider = ({ children }) => {
         user: state.user,
         login,
         getLoggedUserInfo,
-        logout
+        logout,
+        register
       }}
     >
       {children}
