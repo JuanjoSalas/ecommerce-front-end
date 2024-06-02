@@ -1,7 +1,7 @@
 import React from "react"
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, Form, Input } from 'antd';
 
 import "./Login.scss";
@@ -74,7 +74,7 @@ const navigate = useNavigate()
         span: 16,
       }}
     >
-      <p>¿Aun no tienes cuenta?</p>
+      <p>¿Aun no tienes cuenta? <Link className="reg" to="/register">Registrate</Link></p>
       <Button type="primary" htmlType="submit">
         Submit
       </Button>

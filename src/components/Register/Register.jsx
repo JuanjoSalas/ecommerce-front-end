@@ -22,9 +22,9 @@ const Register = ()=>{
     }
   return (
     <form onSubmit={onSubmit}>
-        <input type="text" name="name" value={name} onChange={onChange} />
-        <input type="email" name="email" value={email} onChange={onChange}/>
-        <input type="password" name="password" value={password} onChange={onChange}/>
+        <input type="text" name="name" placeholder="Nombre y Apellidos" required value={name} onChange={onChange} />
+        <input type="email" name="email" placeholder="Correo electrónico" required value={email} onChange={onChange}/>
+        <input type="password" name="password" placeholder="Contraseña" required value={password} onChange={onChange}/>
         <button type="submit">Register</button>
     </form>
   )
