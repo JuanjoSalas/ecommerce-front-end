@@ -40,7 +40,7 @@ const Profile = () => {
   
   }
   return (
-    <div>
+    <div className="content-profile">
       <img className="nav-img" src={ avatar }/>
       <p> {user.name}</p>
       <p> {user.email}</p>
