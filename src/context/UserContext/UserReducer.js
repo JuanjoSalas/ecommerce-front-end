@@ -5,10 +5,6 @@ const users = (state, action) => {
           ...state,
           token: action.payload.token,
         };
-        case "CREATE":
-         return {
-          ...state,
-        };
         case "GET_USER_INFO":
           return {
             ...state,
@@ -20,8 +16,14 @@ const users = (state, action) => {
             token:"",
             user: null
           };
+        case "REGISTER":
+          return {
+          ...state,
+          token: action.payload.token,
+        }; 
       default:
         return state;
     }
   };
+
   export default users;

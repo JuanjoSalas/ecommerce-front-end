@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { useContext } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
+import { useNavigate } from "react-router-dom";
+
 import "./Register.scss";
 
 const Register = ()=>{
@@ -21,6 +23,7 @@ const Register = ()=>{
         e.preventDefault()
         console.log('formData',formData)
     }
+    
   return (
     <div className="Register-container">
     <form class="form-register" onSubmit={onSubmit}>
