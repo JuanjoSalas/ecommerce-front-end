@@ -1,6 +1,5 @@
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
+![Banner](https://github.com/JuanjoSalas/ecommerce-front-end/assets/161235632/d7831dc3-587e-409b-85ce-32318c6168ed)
 
 # Front-end página de juegos de mesa
 
