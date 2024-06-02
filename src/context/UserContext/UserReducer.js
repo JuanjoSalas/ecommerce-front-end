@@ -5,10 +5,10 @@ const users = (state, action) => {
           ...state,
           token: action.payload.token,
         };
-        //case "CREATE":
-        // return {
-
-        //};
+        case "CREATE":
+         return {
+          ...state,
+        };
         case "GET_USER_INFO":
           return {
             ...state,

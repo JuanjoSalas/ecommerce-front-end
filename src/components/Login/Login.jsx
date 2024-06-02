@@ -74,6 +74,7 @@ const navigate = useNavigate()
         span: 16,
       }}
     >
+      <p>¿Aun no tienes cuenta?</p>
       <Button type="primary" htmlType="submit">
         Submit
       </Button>

@@ -22,12 +22,12 @@ export const Header = () => {
             <span><Link to="/"><img className="nav-img" src={ logo }/></Link></span>
             {token ? (
             <>
-              <span className="nav" ><Link to="/user/userInfo">Perfil</Link></span>
+              <span className="nav" ><Link to="/profile">Perfil</Link></span>
              <span className="nav" ><Link to="/cart"> Cesta <Badge count={cart.length} size="small"><ShoppingCartOutlined /></Badge></Link></span>
               <button class="comic-button"
             onClick={() => {
               logout();
-              navigate("/login");
+              navigate("/");
             }}
           ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAASpJREFUSEvtloEJwjAQRe9v4ii6iU6inUScREdxk29+SbSEKHfRWgQPCqUkffm5y8/BFgosxLXfApNcmZkeVwC41APDikkezWzrIj4GXc3sBOBQPoXAJAUUuDc2RX0UfDazdVIsBbsAXfMUQ1HdC74A2HjBJPkHv9zqfGy2JS8kS47n22qSKiKB7pD8Tem6AlCBucKd4+rYhNS1VuICNwxCrjO4pKWBLZd6Cc75lDloi7sDqSDqyR6wcur24NbqwmD9pFRxet1PfhpyqfBWT1efjEZmXuDfKa6ygKxeW6+jM9rj9DpsKXtWGK6qrpQr33sA44XwFQN5ch7nd64/uM5xxM2y57/VCCzW+qjKe2313vZIeqj1qc6421o/0t523x7VxC7Fn4AvBr4B3SbcH7E0YVkAAAAASUVORK5CYII="/></button>
         </>

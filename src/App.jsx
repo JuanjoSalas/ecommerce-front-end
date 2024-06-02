@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer.jsx";
 import { UserProvider } from './context/UserContext/UserState.jsx';
 import Cart from './components/Cart/Cart.jsx';
 import Profile from './components/Profile/Profile.jsx';
+import Register from './components/Register/Register.jsx';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
     <Route path="/cart" element={<Cart />} />
     <Route path="/user/login" element={<Login/>}/>
     <Route path="/profile" element={<Profile />} />
-   
+    <Route path="/register" element={<Register/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>

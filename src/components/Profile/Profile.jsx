@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext/UserState";
 import { Link } from "react-router-dom";
-import { Spin } from "antd";
+import avatar from "../../assets/img/Avatar.png"
+
 import "./Profile.scss";
 
 const Profile = () => {
@@ -40,6 +41,7 @@ const Profile = () => {
   }
   return (
     <div>
+      <img className="nav-img" src={ avatar }/>
       <p> {user.name}</p>
       <p> {user.email}</p>
     </div>
